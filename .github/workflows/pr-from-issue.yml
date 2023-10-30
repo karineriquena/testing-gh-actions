@@ -23,7 +23,7 @@ jobs:
           echo "OBJ=${{steps.parse.outputs.payload}}" >> $GITHUB_ENV
       
       - name: Show var
-        run: echo $OBJ
+        run: echo "${{fromJson($OBJ).Browsers}}"
 # echo "TEST=${{fromJSON(steps.parse.outputs.payload.Test)}}" >> $GITHUB_ENV
 
 # - name: Define branch name
