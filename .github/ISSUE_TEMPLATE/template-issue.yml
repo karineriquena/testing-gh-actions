@@ -1,0 +1,37 @@
+name: "Abra a issue aqui"
+description: essa issue serve para reportar um problema e realizar o open source
+title: "[BUG]:"
+labels:
+  - "awaiting-trige"
+  - "open-source"
+assignees:
+  - ${{github.author}}
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Favor preencher todos os campos atenciosamente.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: ">>>Escopo<<<"
+      description: Escreva o escopo de atuação
+      multiple: false
+      options:
+        - fix
+        - feat
+        - docs
+        - chore
+        - test
+        - refactor
+      validations:
+        required: true
+
+  - type: input
+    id: chunk
+    attributes:
+      label: ">>>Parte do sistema<<<"
+      description: Informe a parte do sistema que será mexida
+      placeholder: ""
+      
