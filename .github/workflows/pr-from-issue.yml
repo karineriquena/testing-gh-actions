@@ -21,7 +21,7 @@ jobs:
       - name: Show parsed data JSON
         run: |
           echo "${{steps.parse.outputs.payload}}"
-          echo "BROWSERS=${{fromJSON(steps.parse.outputs.payload.Browsers)}}" >> $GITHUB_ENV
+          echo "${{fromJSON(steps.parse.outputs.payload.Browsers)}}"
 # echo "TEST=${{fromJSON(steps.parse.outputs.payload.Test)}}" >> $GITHUB_ENV
 
 # - name: Define branch name
