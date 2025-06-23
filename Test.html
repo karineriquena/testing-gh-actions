@@ -1,4 +1,36 @@
 <div class="box">
+<div class="title">
+Box title
+<button type="button" aria-expanded="false">Toggle</button>
+</div>
+<p>
+NVDA doesn't announce expanded/collapsed.
+</p>
+<div class="panel">
+Some content.<br>
+One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+</div>
+</div>
+
+<div class="box no-pseudo-content-change">
+<div class="title">
+Box title
+<button type="button" aria-expanded="false">Toggle</button>
+</div>
+<p>
+No content change for the pseudo element: NVDA does announce expanded/collapsed.
+</p>
+<div class="panel">
+Some content.<br>
+One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+</div>
+</div>
+
+<p>
+As a workaround, place the CSS generated pseudo element inside an element with aria-hidden=true.
+</p>
+
+<div class="box">
 <div class="title-with-toggle-indicator">
 Box title
 <button type="button" aria-expanded="false">Toggle</button>
